@@ -68,7 +68,7 @@ router.put('/:id', (req, res) => {
   })
   .then(dbProductData => {
     if (!dbProductData[0]) {
-      res.status(404).json({message: 'No category with this id.'});
+      res.status(404).json({message: 'No categories with this id.'});
       return;
     }
     res.json(dbProductData);
@@ -85,7 +85,7 @@ router.delete('/:id', (req, res) => {
   })
   .then(dbProductData => {
     if (!dbProductData) {
-      res.status(404).json({message: 'No category with this id.'});
+      res.status(404).json({message: 'No categories with this id.'});
       return;
     }
     res.json(dbProductData);
